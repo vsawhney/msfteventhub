@@ -17,19 +17,18 @@ import time
 from azure.core.credentials import AzureNamedKeyCredential
 from azure.eventhub import EventHubProducerClient, EventData
 
-# Target namespace and hub must also be specified.
+
 FULLY_QUALIFIED_NAMESPACE = input("Enter the name of your Event Hub Full Qualified Namespace: ")
 print (FULLY_QUALIFIED_NAMESPACE)
 EVENTHUB_NAME = input("Enter the name of your Event Hub Name: ")
 print(EVENTHUB_NAME)
-EVENTHUB_POLICY_NAM = input("Enter the name of your Event Hub Policy Name: ")
-print(EVENTHUB_POLICY_NAM)
+EVENTHUB_POLICY_NAME = input("Enter the name of your Event Hub Policy Name: ")
+print(EVENTHUB_POLICY_NAME)
 EVENTHUB_KEY = input("Enter the name of your Event Hub Key: ") 
 print(EVENTHUB_KEY)
 to_send_message_cnt = int(input("Enter the number of events to generate:"))
 print (to_send_message_cnt )
-
-
+#Target namespace and hub must also be specified.
 
 credential = AzureNamedKeyCredential(EVENTHUB_POLICY_NAME, EVENTHUB_KEY)
 
@@ -47,6 +46,7 @@ with producer_client:
     event_data_batch = producer_client.create_batch()
     for i in range(to_send_message_cnt):
         event_data = EventData('D' * bytes_per_message)
+        print (event_data)
         try:
             event_data_batch.add(event_data)
         except ValueError:
