@@ -7,17 +7,12 @@ pip install azure.eventhub
 pip install
 
 C:\Python310>python ev_data_generator.py
-
 Enter the name of your Event Hub Full Qualified Namespace: <redacted>
-<redacted>
 Enter the name of your Event Hub Name: <redacted>
-<redacted>
 Enter the name of your Event Hub Policy Name: <redacted>
-<redacted>
 Enter the name of your Event Hub Key: <redacted>
-<redacted>
-Enter the number of events to generate:5000000
-5
+
+Enter the number of events to generate:5
 Send messages in 881.4821891784668 seconds.
 
 { body: 'DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD', properties: {} }
