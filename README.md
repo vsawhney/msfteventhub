@@ -1,9 +1,10 @@
-# msfteventhub
-
 Usage:
 The event hub data generator will generate random event of particular size and number which will be required as input.
 
 Usage:
+pip install azure.eventhub
+pip install
+
 C:\Python310>python ev_data_generator.py
 Enter the name of your Event Hub Full Qualified Namespace: <redacted>
 <redacted>
